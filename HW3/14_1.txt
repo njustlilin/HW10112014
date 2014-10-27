@@ -1,0 +1,29 @@
+//#include "mbed.h"
+
+//DigitalOut myled(LED1);
+
+#define FIO1DIR1 (*(volatile unsigned char *)(0x2009C022))
+#define FIO1PIN1 (*(volatile unsigned char *)(0x2009C036))
+#define FIO1PIN2 (*(volatile unsigned char *)(0x2009C039))
+#define FIO1PIN3 (*(volatile unsigned char *)(0x2009C040))
+#define FIO1PIN4 (*(volatile unsigned char *)(0x2009C041))
+
+void delay()
+{
+    for (int i = 0; i< 10000000; i++)
+        ;
+}
+
+int main() {
+    FIO1DIR1 = 0xFF;
+    while(1) {
+        FIO1PIN1 |= 0x01;
+        delay();
+        FIO1PIN1 &= ~0x01;
+        delay();
+        FIO1PIN2 = 1;
+        FIO1PIN3 = 1;
+        FIO1PIN4 = 1;
+    }
+}
+
