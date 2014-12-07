@@ -1,0 +1,19 @@
+
+1. Search: "firmware" at Google
+   https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=firmware
+
+. . . 
+. . . 
+. . . 
+. . . 
+. . . 
+. . . 
+. . . 
+. . . 
+. . . 
+
+2. Search results are returned within 0.36 seconds.
+
+What is happening in the background?
+
+When type the information on the keyboard, the information got decoded and send to processor of local PC.Then the information will be encoded and send to video card and show up on screen. Any information showed up, it will also get interpreted by search engine which will find related information from DB which is from the google server. Speed will be limited to server location, algorithm complexity and recent search history, etc.

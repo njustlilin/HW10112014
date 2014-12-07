@@ -1,0 +1,45 @@
+BEGIN
+--------------------------------------------------------------------
+1. What is the _mask value for LED1? 
+   What is the address of FIOSET?
+
+
+
+
+
+--------------------------------------------------------------------
+2. What is the RS232 Frame?
+
+start bit - 1bit
+data bits - 9 bit
+parity bit - 1 bit
+stop bit - 1bit
+
+
+
+--------------------------------------------------------------------
+3. Explain the start and stop conditions of i2c?
+start: pull SDA line low and then SCL line low
+stop: bus master release SCL then SDA
+
+
+
+
+
+--------------------------------------------------------------------
+4. Is the i2c acknowledge SDA LOW or SDA HIGH?
+SDA low
+
+
+
+
+
+--------------------------------------------------------------------
+5. Tell me about the DDR3 write leveling Concept in one sentence.  
+   (ref: slides)
+allow controller to compensate for flight time skew between clock and strobe at DRAM and DIMM
+
+
+
+
+END
