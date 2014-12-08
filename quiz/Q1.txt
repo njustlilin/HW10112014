@@ -8,7 +8,7 @@ Q1: Is there any compile error with the following code (if any)?
 Explain:
 
 
-Yes. Number could not be defined as variable. 
+No. 3[Arr] is the same as Arr[3]
 
 
 --------------------------------------------------------------------
@@ -77,10 +77,10 @@ void reg_clear(volatile unsigned int * pReg, int ith)
 Q4: Write a swap function in C.
 void swap(unsigned int * px, unsigned int *py) { 
 
-unsigned int *temp;
-temp=px;
-px = py;
-py = temp;
+unsigned int temp;
+temp=*px;
+*px = *py;
+*py = temp;
 
 
 } 
