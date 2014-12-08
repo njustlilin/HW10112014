@@ -6,15 +6,17 @@ inline int CircularBufferIsEmpty(CircularBuffer* que)
 
 inline int CircularBufferIsFull(CircularBuffer* que) 
 {
-	if (que.tail == que.head)
-		return EMPTY;
-}
-inline int CircularBufferIsEmpty(CircularBuffer* que)
-{
+
 	if(que.tail - 1 == que.head)
 		return FULL;
 }
+inline int CircularBufferIsEmpty(CircularBuffer* que)
+{
+	if (que.tail == que.head)
+		return EMPTY;
+}
 
+head is the read pointer, tail is the write pointer
 --------------------------------------------------------------------
 Q2: How to compute "Interrupt Latency"?
 request passes through sychronizer+longest instruction to complete worst case instruction execution + data abort entry + FIQ entry
@@ -23,14 +25,14 @@ request passes through sychronizer+longest instruction to complete worst case in
 --------------------------------------------------------------------
 Q3: Serial pc(USBTX, USBRX); // tx, rx 
     What API (function) do you use to change the baud rate?
-pc.baud
+pc.baud(BAUDRATE);
 
 
 
 --------------------------------------------------------------------
 Q4: How many bit(s) does TDO have? Is TDO an input or output type? (Ref: JTAG Pins) 
 
-bit number depends on the scan chain size
+1 bit
 output
 
 
