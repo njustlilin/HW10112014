@@ -16,6 +16,8 @@ inline int CircularBufferIsEmpty(CircularBuffer* que)
 {
 	if (que->readpointer == que->writepointer)
 		return 1;
+	else
+		return 0;
 }
 
 head is the read pointer, tail is the write pointer
