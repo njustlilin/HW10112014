@@ -7,13 +7,15 @@ inline int CircularBufferIsEmpty(CircularBuffer* que)
 inline int CircularBufferIsFull(CircularBuffer* que) 
 {
 
-	if(que.tail - 1 == que.head)
-		return FULL;
+	if(que->writepointer + 1 == que->readpointer)
+		return 1;
+	else
+		return 0;
 }
 inline int CircularBufferIsEmpty(CircularBuffer* que)
 {
-	if (que.tail == que.head)
-		return EMPTY;
+	if (que->readpointer == que->writepointer)
+		return 1;
 }
 
 head is the read pointer, tail is the write pointer
@@ -41,7 +43,11 @@ output
 Q5:
 What is the address of ledArr[0]? 
 What is the address of ch? 
+answer:
 
+ch address in the DisplayLed function is: 0x10007fe8
+ledArr[0] address is 0x10000150
+ch address in main function is :0x10007ff8
 
 /* 
 * Enter a hex number [0-9a-fA-F]; Decode it in 4-bit binary format and display them on 4 on board leds. 
